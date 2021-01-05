@@ -19,7 +19,7 @@ Auth::routes();
 // カテゴリ一覧ページ
 Route::get('/home', 'HomeController@index')->name('home');
 // 商品一覧ページ
-Route::get('/item_list', 'ItemController@ShowItemList');
+Route::get('/item_list', 'HomeController@ShowItemList');
 
 Route::prefix('cart')->name('cart')->group(function() {
     // カート一覧ページ
