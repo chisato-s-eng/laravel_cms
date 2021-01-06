@@ -25,4 +25,17 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show items for list. 
+     */
+    public function ShowItemList(Request $request)
+    {
+        $category = $request->category;
+        $items = \App\Item::where('category', $category)->where('status',1)->get();
+
+        return view('item.index', [
+            'items' => $items,
+        ]);
+    }
 }

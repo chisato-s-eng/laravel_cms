@@ -11,7 +11,7 @@ class ItemController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth:admin');
     }
 
     /**
@@ -21,19 +21,6 @@ class ItemController extends Controller
         $items = \App\Item::all();
 
         return view('item.index',[
-            'items' => $items,
-        ]);
-    }
-
-    /**
-     * Show items for list. 
-     */
-    public function ShowItemList(Request $request)
-    {
-        $category = $request->category;
-        $items = \App\Item::where('category', $category)->where('status',1)->get();
-
-        return view('item.index', [
             'items' => $items,
         ]);
     }
