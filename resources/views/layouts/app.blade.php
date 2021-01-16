@@ -55,6 +55,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ route('home') }}">カテゴリ一覧</a></li>
                                     <li><a href="{{ route('cart') }}">カート</a></li>
+                                    <li><a href="{{ route('history') }}">購入履歴</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

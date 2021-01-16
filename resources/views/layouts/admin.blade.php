@@ -58,6 +58,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
+                                    <li><a href="{{ route('admin.home') }}">商品管理</a></li>
+                                    <li><a href="{{ route('admin.history') }}">購入履歴</a></li>
                                     <li>
                                         <a href="{{ route('admin.logout') }}"
                                             onclick="event.preventDefault();
