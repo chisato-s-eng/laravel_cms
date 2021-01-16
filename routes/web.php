@@ -20,6 +20,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // 商品一覧ページ
 Route::get('/item_list', 'HomeController@ShowItemList');
+// 購入履歴ページ
+Route::get('/history', 'HomeController@ShowHistoryList')->name('history');
+// 購入明細ページ
+Route::get('/history/{id}/detail', 'HomeController@ShowHistoryDetail')->name('history.detail');
 
 Route::prefix('cart')->name('cart')->group(function() {
     // カート一覧ページ
@@ -57,4 +61,8 @@ Route::prefix('admin')->name('admin.')->group(function() {
     // 商品削除処理
     Route::post('/delete_item', 'ItemController@DeleteItem')->name('delete_item');
     
+    // 購入履歴一覧
+    Route::get('/history', 'Admin\HomeController@ShowHistoryList')->name('history');
+    // 購入明細ページ
+    Route::get('/history/{id}/detail', 'Admin\HomeController@ShowHistoryDetail')->name('history.detail');
 });
