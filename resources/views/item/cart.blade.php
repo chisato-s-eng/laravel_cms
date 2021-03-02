@@ -11,7 +11,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">カート</h3>
@@ -46,7 +46,7 @@
                                                 <form method="post" action="{{ route('cart.update_amount') }}">
                                                     {{ csrf_field() }}
                                                     <div class="form-group">
-                                                        <input  type="text" name="amount" value="{{ $cart->amount }}">個
+                                                        <input  type="text" name="amount" value="{{ $cart->amount }}" class="form-control" size="30">個
                                                     </div>
                                                     <input type="submit" value="変更" class="btn btn-secondary">
                                                     <input type="hidden" name="cart_id" value="{{ $cart->id }}">

@@ -7,14 +7,14 @@
     max-height: 200px;
 }
 .title{
-    height: 100px;
+    height: 90px;
 }
 </style>
 
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">商品一覧</h3>
