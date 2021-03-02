@@ -8,8 +8,8 @@
   padding: 10px;
 }
 .item_image{
-    max-height: 300px;
-    max-width: 200px;
+    max-height: 100px;
+    max-width: 100px;
 }
 </style>
 
@@ -77,7 +77,7 @@
                         <input type="submit" value="商品追加" class="btn btn-primary">
                     </form>
                 </div>
-               
+                <div class="table-responsive">
                 <table class="table table-bordered text-center">
                     <thead class="thead-light">
                         <tr>
@@ -116,7 +116,7 @@
                                     <form method="post" action="{{ route('admin.update_stock') }}">
                                         {{ csrf_field() }}
                                         <div class="form-group">
-                                            <input  type="text" name="stock" value="{{ $item->stock }}">個
+                                            <input  type="text" name="stock" value="{{ $item->stock }}" class="form-control" size="10">個
                                         </div>
                                         <input type="submit" value="変更" class="btn btn-secondary">
                                         <input type="hidden" name="item_id" value="{{ $item->id }}">
@@ -147,6 +147,7 @@
                         @endforelse 
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>
