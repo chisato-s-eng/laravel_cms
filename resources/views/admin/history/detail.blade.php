@@ -1,6 +1,11 @@
 @extends('layouts.admin')
 
 @section('style')
+<style>
+a {
+    text-decoration: none;
+}
+</style>
 
 @section('content')
 <div class="container">
@@ -46,6 +51,14 @@
                         @endforelse
                         </tbody>
                     </table>
+                </div>
+
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button class="btn btn-link">
+                            <a href="{{ route('admin.history') }}">戻る</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

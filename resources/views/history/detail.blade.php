@@ -47,6 +47,14 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button class="btn btn-link">
+                            <a href="{{ route('history') }}">戻る</a>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
